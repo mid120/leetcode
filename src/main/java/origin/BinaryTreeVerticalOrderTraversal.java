@@ -48,7 +48,7 @@ public class BinaryTreeVerticalOrderTraversal {
 		if (list.get(index + leftlen) != null) {
 			list.get(index + leftlen).add(root.val);
 		} else {
-			list.add(new ArrayList<>(root.val));
+			list.add(new ArrayList<Integer>(root.val));
 		}
 		helper(list, root.left, index - 1, leftlen);
 		helper(list, root.right, index + 1, leftlen);

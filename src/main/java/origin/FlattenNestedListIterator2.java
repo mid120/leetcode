@@ -53,7 +53,8 @@ public class FlattenNestedListIterator2 {
 		Deque<NestedInteger> s;
 
 		public NestedIterator(List<NestedInteger> nestedList) {
-			s = new ArrayDeque<>(nestedList == null ? Arrays.asList() : nestedList);
+
+			s = new ArrayDeque<NestedInteger>(nestedList == null ? null : nestedList);
 		}
 
 		@Override

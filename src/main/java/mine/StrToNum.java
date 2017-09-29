@@ -35,6 +35,11 @@ public class StrToNum {
 //        System.out.println(a);
 //    }
 
+    /**
+     * ²âÊÔhashMapµÄrepalce·½·¨
+     * @param args
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws InterruptedException {
 
         // get the HashMap object from the method init()

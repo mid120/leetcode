@@ -25,8 +25,8 @@
         <module name="baozun-leetcode" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="baozun-leetcode" target="1.5" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="baozun-leetcode" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

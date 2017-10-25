@@ -10,7 +10,7 @@ package origin;
  * 0.1 < 1.1 < 1.2 < 13.37
  */
 public class CompareVersionNumbers {
-	public int compareVersion(String version1, String version2) {
+	public static int compareVersion(String version1, String version2) {
 		String[] levels1 = version1.split("\\.");
 		String[] levels2 = version2.split("\\.");
 
@@ -24,5 +24,9 @@ public class CompareVersionNumbers {
 			}
 		}
 		return 0;
+	}
+
+	public static void main(String[] args) {
+		compareVersion("3.22","3.2");
 	}
 }

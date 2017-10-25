@@ -7,14 +7,14 @@ import java.util.HashSet;
 
 public class ContainsDuplicate2 {
 
-	public boolean containsDuplicate(int[] nums) {
+	public static boolean containsDuplicate(int[] nums) {
 		if (nums.length == 0)
 			return false;
 		return iscontainsDuplicate(nums, 0, nums.length - 1);
 
 	}
 
-	private boolean iscontainsDuplicate(int[] nums, int i, int j) {
+	private static boolean iscontainsDuplicate(int[] nums, int i, int j) {
 		int length = j - i + 1;
 		if (length == 1)
 			return false;
@@ -32,5 +32,13 @@ public class ContainsDuplicate2 {
 				return true;
 		}
 		return iscontainsDuplicate(nums, i, mid) || iscontainsDuplicate(nums, mid + 1, j);
+	}
+
+	public static void main(String[] args) {
+		int [] arr ={0,1,2};
+		Long start =System.currentTimeMillis();
+		boolean b = containsDuplicate(arr);
+		System.out.println(System .currentTimeMillis()-start);
+		System.out.println(b);
 	}
 }

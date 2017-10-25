@@ -9,14 +9,14 @@ package origin;
  * Note: The sequence of integers will be represented as a string.
  */
 public class CountandSay {
-	public String countAndSay(int n) {
+	public static String countAndSay(int n) {
 		String str = "1";
 		while (--n > 0)
 			str = next_seq(str);
 		return str;
 	}
 
-	public String next_seq(String str) {
+	public static String next_seq(String str) {
 		StringBuffer nextstr = new StringBuffer();
 		int count = 1;
 		int i;
@@ -30,5 +30,10 @@ public class CountandSay {
 		}
 		nextstr.append(count).append(str.charAt(i - 1));
 		return nextstr.toString();
+	}
+
+	public static void main(String[] args) {
+		String s = countAndSay(2);
+		System.out.println(s);
 	}
 }

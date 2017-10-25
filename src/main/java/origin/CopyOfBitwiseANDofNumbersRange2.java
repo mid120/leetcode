@@ -38,8 +38,25 @@ public class CopyOfBitwiseANDofNumbersRange2 {
 		return res;
 	}
 
+	/**
+	 * 简洁易懂
+	 * @param m
+	 * @param n
+	 * @return
+	 */
+	public static int rangeBitwiseAnd2(int m, int n) {
+		int bits = 0;
+		while (m != n)
+		{
+			m >>= 1;
+			n >>= 1;
+			++bits;
+		}
+		return m << bits;
+	}
+
 	public static void main(String[] args) {
-		System.out.println(rangeBitwiseAnd(10,13));
+		System.out.println(rangeBitwiseAnd(10,12));
 	}
 
 }

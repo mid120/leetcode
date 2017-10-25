@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 public class ContainsDuplicate {
 
-    public boolean containsDuplicate(int[] nums) {
+    public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set= new HashSet<Integer>();
         for(int i=0;i<nums.length;i++){
             if(set.contains(nums[i])){
@@ -19,6 +19,14 @@ public class ContainsDuplicate {
             }
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        int [] arr ={0,1,1};
+       Long start =System.currentTimeMillis();
+        boolean b = containsDuplicate(arr);
+        System.out.println(System .currentTimeMillis()-start);
+        System.out.println(b);
     }
 
 }

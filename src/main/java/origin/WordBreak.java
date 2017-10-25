@@ -1,5 +1,6 @@
 package origin;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /*Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
@@ -15,7 +16,7 @@ import java.util.Set;
  * Initial state t[0] == true
  */
 public class WordBreak {
-	public boolean wordBreak(String s, Set<String> dict) {
+	public static boolean wordBreak(String s, Set<String> dict) {
 		boolean[] t = new boolean[s.length() + 1];
 		t[0] = true; // set first to be true, why?
 		// Because we need initial state
@@ -36,5 +37,14 @@ public class WordBreak {
 			}
 		}
 		return t[s.length()];
+	}
+
+	public static void main(String[] args) {
+		HashSet<String> dict = new HashSet<>();
+		dict.add("leet");
+		dict.add("code");
+		dict.add("abcdefghijk");
+		String s = "leetcode";
+		System.out.println(wordBreak(s, dict));
 	}
 }

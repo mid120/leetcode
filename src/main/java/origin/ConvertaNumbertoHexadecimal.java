@@ -38,6 +38,6 @@ public class ConvertaNumbertoHexadecimal {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(toHex(26));
+		System.out.println(toHex(-1));
 	}
 }

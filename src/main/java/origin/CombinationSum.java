@@ -10,13 +10,14 @@ import java.util.Arrays;
  * 1.All numbers (including target) will be positive integers.
  * 2.Elements in a combination (a1, a2, … , ak) must be in non-descending order. (ie, a1 ≤ a2 ≤ … ≤ ak).
  * 3.The solution set must not contain duplicate combinations.
- * For example, given candidate set 2,3,6,7 and target 7, 
+ * For example, given candidate set 2,3,6,7
+  * target 7,
  * A solution set is: 
  * [7] 
  * [2, 2, 3] 
  */
 public class CombinationSum {
-	public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
+	public static ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
 		ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
 		if (candidates == null || candidates.length == 0)
 			return res;
@@ -25,7 +26,7 @@ public class CombinationSum {
 		return res;
 	}
 
-	private void helper(int[] candidates, int start, int target, ArrayList<Integer> item,
+	private static void helper(int[] candidates, int start, int target, ArrayList<Integer> item,
 			ArrayList<ArrayList<Integer>> res) {
 		if (target < 0)
 			return;
@@ -40,5 +41,12 @@ public class CombinationSum {
 			helper(candidates, i, target - candidates[i], item, res);
 			item.remove(item.size() - 1);
 		}
+	}
+
+	public static void main(String[] args) {
+		int [] arr={2,3,6,7};
+		ArrayList<ArrayList<Integer>> lists = combinationSum(arr, 7);
+		System.out.println(lists);
+
 	}
 }
